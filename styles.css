@@ -539,7 +539,7 @@ body {
   clip-path: circle(23% at center);
 }
 
-.line {
+.brazil .line {
   position: absolute;
   align-items: flex-end;
   width: 40%;
@@ -548,4 +548,55 @@ body {
   border-radius: 50%;
   top: 40%;
   left: 20%;
+}
+
+/* ------------------------------------------Wizard Hat */
+
+.wizard_hat {
+  background-color: #f4dcbf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wizard_hat .gray {
+  background-color: #30383f;
+}
+
+.wizard_hat .absolute {
+  position: absolute;
+}
+
+.wizard_hat .triangle {
+  width: 25%;
+  height: 50%;
+  clip-path: polygon(50% 0, 100% 100%, 0% 100%);
+  top: 18%;
+}
+.wizard_hat .ellipse {
+  top: 65%;
+  width: 40%;
+  height: 20%;
+  clip-path: ellipse();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wizard_hat .line {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 70%;
+  height: 70%;
+  border: 10px solid #556d7f;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.wizard_hat .emblemat {
+  width: 20%;
+  height: 30%;
+  background-color: #fbd038;
+  border-radius: 10px;
 }
