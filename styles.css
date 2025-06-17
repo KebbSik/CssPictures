@@ -1,0 +1,991 @@
+html {
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.page_content {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  justify-content: space-around;
+  gap: 1rem;
+}
+.item_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: max(40%, 450px);
+  min-height: 400px;
+  border: 1px solid red;
+}
+
+.container {
+  width: max(40%, 400px);
+  min-height: 300px;
+  border: 5px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.container > div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ------------------------------------------ cube */
+.cube {
+  background: #101724;
+}
+.cube_white_rhombus {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 15%;
+  left: 25%;
+  background-color: white;
+
+  -webkit-mask-image: radial-gradient(ellipse, transparent 40%, black 41%);
+  mask-image: radial-gradient(ellipse, transparent 40%, black 41%);
+
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.cube_transparent_rhombus {
+  height: 30%;
+  width: 30%;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  background-color: gold;
+}
+
+.cube .two {
+  top: 35%;
+  background: blue;
+}
+
+.cube_rect {
+  position: absolute;
+  width: 5%;
+  height: 20%;
+  background: linear-gradient(white 25%, blue 75%);
+}
+
+.cube_rect_one {
+  top: 20%;
+  left: 47.5%;
+}
+.cube_rect_two {
+  top: 40%;
+  left: 70%;
+}
+.cube_rect_three {
+  top: 60%;
+  left: 47.5%;
+}
+.cube_rect_four {
+  top: 40%;
+  left: 25%;
+}
+
+/* ------------------------------------------ tower */
+
+.tower {
+  background-color: #67aed4;
+}
+
+.tower .ground_floor {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 35%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background: #fff;
+}
+.ground_floor .window_S {
+  height: 80%;
+  width: 10%;
+  background: #67aed4;
+}
+
+.ground_floor .window_XL {
+  height: 80%;
+  width: 15%;
+  background: #0f2836;
+}
+
+.tower .main_building {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 95%;
+  width: 23.5%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main_building > * {
+  background: #fff;
+}
+.main_building .top {
+  width: 15%;
+  height: 20%;
+}
+.main_building .middle {
+  width: 60%;
+  height: 20%;
+}
+.main_building .bottom {
+  width: 100%;
+  height: 60%;
+}
+/* ------------------------------------------ connection */
+
+.connection {
+  background-color: #3f4869;
+  /* padding: 10%; */
+}
+
+.connection .red {
+  background-color: #e25c57;
+}
+
+.connection .yellow {
+  background-color: #f4da64;
+}
+
+.connection .half_circle {
+  position: absolute;
+  width: 40%;
+  height: 50%;
+  clip-path: circle(50% at 50% 100%);
+}
+
+.connection .part1 {
+  left: 20%;
+}
+.connection .part2 {
+  right: 20%;
+}
+.connection .part3 {
+  transform: rotate(180deg);
+  left: 20%;
+  bottom: 0;
+}
+.connection .part4 {
+  transform: rotate(180deg);
+  bottom: 0;
+  right: 20%;
+}
+
+/* ------------------------------------------ Glasses */
+.glasses {
+  background-color: #558c90;
+  display: flex;
+  align-items: center;
+}
+.glasses .middle_rect {
+  height: 15%;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.glasses .wrapper {
+  display: flex;
+  width: 60%;
+  height: 100%;
+}
+.glasses .circle_xl {
+  width: 100%;
+  height: 300%;
+  clip-path: circle(45% at center);
+  background-color: #fff;
+  transform: translateY(-30%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.glasses .circle_s {
+  width: 50%;
+  height: 50%;
+  clip-path: circle(44% at center);
+  background-color: #325853;
+}
+
+/* ------------------------------------------ Rocket */
+
+.rocket {
+  background-color: #b0e1fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rocket .blue {
+  background-color: #4b4d88;
+}
+.rocket .red {
+  background-color: #c15965;
+}
+
+.rocket .wrapper {
+  position: relative;
+  width: 40%;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+}
+
+.rocket .body {
+  width: 40%;
+  height: 85%;
+  border-radius: 50px;
+  z-index: 0;
+}
+
+.rocket .footing {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+}
+.rocket .mask {
+  position: absolute;
+  bottom: 10%;
+  height: 45%;
+  width: 70%;
+  clip-path: circle(50% at center);
+  background-color: #b0e1fb;
+}
+.rocket .right_wing {
+  position: absolute;
+  top: 45%;
+  right: 0;
+  width: 25%;
+  height: 15%;
+  clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+}
+.rocket .left_wing {
+  position: absolute;
+  top: 45%;
+  left: 0%;
+  width: 25%;
+  height: 15%;
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+}
+
+/* ------------------------------------------ UFO */
+
+.ufo {
+  background-color: #2f434e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ufo .red {
+  background-color: #e25c57;
+}
+
+.ufo .yellow {
+  background-color: #f3ac3c;
+}
+
+.ufo .wrapper {
+  width: 70%;
+  height: 60%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.ufo .tube {
+  width: 70%;
+  height: 100%;
+  clip-path: circle(45% at 50% 65%);
+}
+
+.ufo .bottom_wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+}
+.ufo .base {
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0% 100%, 20% 0%, 80% 0%, 100% 100%);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.ufo .circle {
+  width: 10%;
+  height: 50%;
+  clip-path: circle();
+}
+
+/* ------------------------------------------ Boat */
+
+.boat {
+  background-color: #eef8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boat .ship_container {
+  width: 45%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.boat .sail {
+  flex-grow: 1;
+  width: 100%;
+  background-color: #4a7d7b;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%);
+}
+
+.boat .hull {
+  width: 100%;
+  height: 25%;
+  background-color: #4a7d7b;
+  clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%);
+}
+
+.boat .water_container {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  display: flex;
+  background-color: #8ab8b6;
+  display: flex;
+}
+
+.boat .wave {
+  flex-grow: 1;
+  height: 50%;
+  background-color: #eef8ff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+/* ------------------------------------------ Flower */
+
+.flower {
+  background-color: #5f133f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flower .rose {
+  background-color: #f7bed9;
+}
+
+.flower .inflorescence {
+  width: 15%;
+  height: 15%;
+  clip-path: circle();
+}
+
+.flower .petal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 13%;
+  height: 70%;
+}
+
+.flower .triangle_up {
+  flex-grow: 1;
+  width: 100%;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.flower .rect {
+  height: 70%;
+  width: 100%;
+  background-color: #f075b0;
+}
+
+.flower .triangle_down {
+  flex-grow: 1;
+  width: 100%;
+  clip-path: polygon(50% 100%, 100% 0%, 0% 0%);
+}
+
+.flower .rotate_60 {
+  transform: rotate(60deg);
+}
+.flower .rotate_120 {
+  transform: rotate(120deg);
+}
+
+/* ------------------------------------------ Friday13th */
+
+.friday13th {
+  background-color: #a5b5b4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.friday13th .mask {
+  position: relative;
+  width: 40%;
+  height: 65%;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.friday13th .eyes {
+  position: relative;
+
+  height: 45%;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0.5rem;
+}
+
+.friday13th .eye {
+  width: 50%;
+  height: 40%;
+  background-color: #000;
+  clip-path: circle();
+}
+
+.friday13th .mouth {
+  margin-top: 5%;
+
+  height: 40%;
+  width: 35%;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(3, 33.3%);
+  justify-items: center;
+  align-items: center;
+}
+
+.friday13th .dot {
+  width: 40%;
+  height: 40%;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.friday13th .forehead_dott {
+  position: absolute;
+  width: 7%;
+  height: 7%;
+  background-color: #000;
+  clip-path: circle();
+}
+
+.friday13th .dot_1 {
+  left: 35%;
+  top: 10%;
+}
+.friday13th .dot_2 {
+  top: 10%;
+  right: 35%;
+}
+.friday13th .dot_3 {
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+/* ------------------------------------------ Brazil Flag */
+
+.brazil {
+  background-color: #009b3a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brazil .rhombus {
+  width: 70%;
+  height: 70%;
+  background-color: #fedf00;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.brazil .circle {
+  width: 100%;
+  height: 100%;
+  background-color: #002776;
+  clip-path: circle(23% at center);
+}
+
+.brazil .line {
+  position: absolute;
+  align-items: flex-end;
+  width: 40%;
+  height: 50%;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  top: 40%;
+  left: 20%;
+}
+
+/* ------------------------------------------Wizard Hat */
+
+.wizard_hat {
+  background-color: #f4dcbf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wizard_hat .gray {
+  background-color: #30383f;
+}
+
+.wizard_hat .absolute {
+  position: absolute;
+}
+
+.wizard_hat .triangle {
+  width: 25%;
+  height: 50%;
+  clip-path: polygon(50% 0, 100% 100%, 0% 100%);
+  top: 18%;
+}
+.wizard_hat .ellipse {
+  top: 65%;
+  width: 40%;
+  height: 20%;
+  clip-path: ellipse();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wizard_hat .line {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 70%;
+  height: 70%;
+  border: 10px solid #556d7f;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.wizard_hat .emblemat {
+  width: 20%;
+  height: 30%;
+  background-color: #fbd038;
+  border-radius: 10px;
+}
+
+/* ------------------------------------------Iceland Hat */
+.iceland {
+  background-color: #de3832;
+}
+.iceland .white_box {
+  position: absolute;
+  background-color: #fff;
+  width: 70%;
+  height: 50%;
+  padding: 3%;
+}
+.iceland .blue_box {
+  background-color: #33499f;
+  height: 100%;
+  width: 100%;
+}
+
+.top_left {
+  transform: translate(-60%, -25%);
+}
+.top_right {
+  transform: translate(60%, -25%);
+}
+.bottom_left {
+  transform: translate(-60%, 105%);
+}
+.bottom_right {
+  transform: translate(60%, 105%);
+}
+/* ------------------------------------------Deadpool */
+
+.deadpool {
+  background-color: #f3ac3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.deadpool .border {
+  width: 50%;
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #9f3333;
+  border-radius: 50%;
+}
+.deadpool .logo {
+  width: 85%;
+  height: 85%;
+  background-color: #9f3333;
+  clip-path: circle();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20%;
+}
+.deadpool .black {
+  width: 50%;
+  height: 100%;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.deadpool .eye_left {
+  width: 20%;
+  height: 100%;
+  clip-path: circle(12% at 0% 50%);
+  background-color: #fff;
+  transform: translate(10%, 0%) rotate(120deg);
+}
+.deadpool .eye_right {
+  width: 20%;
+  height: 100%;
+  clip-path: circle(12% at 100% 50%);
+  background-color: #fff;
+  transform: translate(-10%, 0%) rotate(-120deg);
+}
+
+/* ------------------------------------------Ironman */
+
+.ironman {
+  background-color: #bb2726;
+  display: flex;
+  justify-content: center;
+}
+.ironman .face {
+  width: 50%;
+  height: 95%;
+  background-color: #f3ac3c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50px;
+}
+.ironman .face .upper {
+  width: 75%;
+  height: 55%;
+  border: 10px solid #bb2726;
+  border-top: 0;
+  border-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.ironman .face .lower {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.ironman .forehead {
+  width: 50%;
+  height: 45%;
+  background-color: #bb2726;
+}
+.ironman .eyes {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+.ironman .eye {
+  border: 10px solid #bb2726;
+  width: 35%;
+  background: #fff;
+}
+.ironman .separator {
+  border-top: 10px solid #bb2726;
+  width: 20%;
+}
+.ironman .left {
+  border-left: 0;
+}
+.ironman .right {
+  border-right: 0;
+}
+.ironman .cheek {
+  height: 70%;
+  width: 20%;
+  border: 10px solid #bb2726;
+}
+.ironman .cheek_left {
+  border-top-right-radius: 50px;
+  border-left: 0;
+}
+.ironman .cheek_right {
+  border-top-left-radius: 50px;
+  border-right: 0;
+}
+.ironman .jaw {
+  border-top: 10px solid #bb2726;
+  height: 30%;
+  width: 60%;
+}
+
+/* ------------------------------------------Sharingan */
+
+.sharingan {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sharingan .len {
+  position: relative;
+  width: 50%;
+  height: 65%;
+  background: #a22015;
+  border: 10px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sharingan .pupil {
+  width: 10%;
+  height: 10%;
+  background-color: #000;
+  border-radius: 50%;
+}
+.sharingan .tear {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  /* border:1px solid #000; */
+  /* border-top-left-radius:200px; */
+  /* border-bottom-right-radius:200px; */
+  /* background:yellow; */
+}
+.sharingan .one {
+  transform: rotate(180deg);
+}
+.sharingan .two {
+  transform: rotate(60deg);
+}
+.sharingan .three {
+  transform: rotate(300deg);
+}
+
+/* ------------------------------------------One Piece */
+.one_piece {
+  background: #000;
+}
+.one_piece .wrapper {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.one_piece .skull_container {
+  width: 40%;
+  height: 80%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.one_piece .upper_wrapper {
+  /* display: none;s */
+  width: 75%;
+  height: 55%;
+  border-radius: 50%;
+  border: 3px solid black;
+  z-index: 1;
+}
+.one_piece .upper {
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  clip-path: circle();
+}
+.one_piece .lower {
+  width: 50%;
+  height: 50%;
+  /* border-radius: 65% 65% 55% 55%; */
+  border: 3px solid black;
+  transform: translateY(-55%);
+  /* z-index: 2; */
+  border-radius: 100% / 140% 140% 60% 60%;
+  overflow: hidden;
+  background-color: #fff;
+}
+.one_piece .top_hat {
+  background: #fbc71c;
+  height: 25%;
+  width: 100%;
+}
+.one_piece .middle_hat {
+  background: red;
+  width: 100%;
+  height: 25%;
+  border: 3px solid black;
+}
+.one_piece .bottom_hat {
+  position: absolute;
+  left: 50%;
+  top: 28%;
+  transform: translate(-50%);
+  height: 3%;
+  width: 50%;
+  background: #fbc71c;
+  border: 3px solid black;
+  border-radius: 20px;
+}
+.one_piece .eyes {
+  height: 35%;
+  width: 100%;
+  /* background: orange; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+.one_piece .eye {
+  width: 30%;
+  height: 70%;
+  background-color: black;
+  clip-path: circle();
+}
+.one_piece .nose {
+  width: 15%;
+  height: 10%;
+  background-color: black;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.one_piece .teeth {
+  position: relative;
+  justify-self: center;
+  width: 150%;
+  height: 75%;
+  border: 3px solid black;
+
+  border-radius: 0 0 50% 50%;
+  display: flex;
+  padding: 0 10%;
+  overflow: hidden;
+}
+.one_piece .lineX {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* background-color: yellow; */
+  border-radius: 0 0 50% 50%;
+  border-bottom: 3px solid black;
+}
+
+.one_piece .lineY {
+  height: 100%;
+  /* flex-grow: 1; */
+  width: 15%;
+  /* background-color: green; */
+  border-right: 3px solid black;
+}
+
+.one_piece .rotate1 {
+  transform: rotate(10deg);
+}
+
+.one_piece .rotate2 {
+  transform: rotate(-10deg);
+}
+
+.one_piece .bone {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%) rotate(45deg);
+  height: 85%;
+  width: 12%;
+  /* border: 1px solid red; */
+  /* background-color: #000; */
+}
+
+.one_piece .reflect {
+  transform: translate(-50%, -60%) rotate(-45deg);
+}
+.one_piece .bone_wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  /* background-color: #000; */
+}
+.one_piece .bone_end {
+  display: flex;
+  width: 100%;
+  height: 8%;
+}
+
+.one_piece .circle {
+  border-radius: 50%;
+  width: 50%;
+  height: 100%;
+  /* border: 3px solid black; */
+  background-color: #fff;
+}
+.bone_middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 95%;
+  /* border-left: 3px solid black; */
+  /* border-right: 3px solid black; */
+  background-color: #fff;
+}
