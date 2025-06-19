@@ -95,9 +95,28 @@ h2 {
   }
 
   p {
-    width: 50%;
     font-size: 1.5rem;
-    text-align: center;
+  }
+  .page_content {
+    gap: 0.5;
+  }
+}
+
+@media (max-width: 512px) {
+  .item_wrapper {
+    transform: scale(0.8);
+  }
+  header {
+    margin-bottom: 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .page_content {
+    gap: 0;
   }
 }
 /* ------------------------------------------ cube */
