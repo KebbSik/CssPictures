@@ -24,6 +24,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   color: white;
   /* margin: 2rem 0; */
   padding: 1rem 0;
@@ -55,11 +56,14 @@ h2 {
 }
 .page_content {
   /* margin-top: -0.1rem; */
+  /* border: 1px solid black; */
   padding: 0.5rem;
+
   display: flex;
   flex-wrap: wrap;
-  /* border: 1px solid black; */
   justify-content: space-around;
+  /* display: grid;
+  grid-template-columns: repeat(5, 1fr); */
   gap: 1rem;
 }
 .item_wrapper {
