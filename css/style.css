@@ -30,6 +30,7 @@ header {
   padding: 1rem 0;
   /* border: 1px solid red; */
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 h1 {
@@ -502,12 +503,12 @@ h2 {
 }
 
 .friday13th .eyes {
-  position: relative;
-
+  /* position: relative; */
+  width: 100%;
   height: 45%;
   display: flex;
   align-items: flex-end;
-  padding: 0 0.5rem;
+  /* padding: 0 0.5rem; */
 }
 
 .friday13th .eye {
@@ -517,12 +518,17 @@ h2 {
   clip-path: circle();
 }
 
+.friday13th .mouth_wrapper {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .friday13th .mouth {
   margin-top: 5%;
-
-  height: 40%;
+  height: 100%;
   width: 35%;
-  justify-self: center;
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: repeat(3, 33.3%);
@@ -892,6 +898,13 @@ h2 {
   clip-path: circle();
 }
 .one_piece .lower {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* display: grid; */
+  /* place-items: center; */
+  /* flex-grow: 0; */
+  /* flex-shrink: 0; */
   width: 50%;
   height: 50%;
   /* border-radius: 65% 65% 55% 55%; */
@@ -950,12 +963,13 @@ h2 {
 .one_piece .teeth {
   position: relative;
   justify-self: center;
-  width: 150%;
+  width: 100%;
   height: 75%;
   border: 3px solid black;
 
   border-radius: 0 0 50% 50%;
   display: flex;
+  justify-content: space-evenly;
   padding: 0 10%;
   overflow: hidden;
 }
@@ -973,9 +987,10 @@ h2 {
 .one_piece .lineY {
   height: 100%;
   /* flex-grow: 1; */
-  width: 15%;
+  width: 0%;
   /* background-color: green; */
-  border-right: 3px solid black;
+  /* border-right: 3px solid black; */
+  border: 1.5px solid black;
 }
 
 .one_piece .rotate1 {
