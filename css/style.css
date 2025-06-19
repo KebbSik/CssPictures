@@ -40,6 +40,14 @@ p {
   width: 50%;
   font-size: 2rem;
   text-align: center;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.4);
+  /* background: radial-gradient(
+    rgba(255, 255, 255, 0.),
+    rgba(255, 255, 255, 0.3)
+  ); */
+  border-radius: 20px;
+  padding: 1rem;
 }
 h2 {
   text-decoration: underline;
