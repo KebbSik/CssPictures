@@ -13,7 +13,6 @@ body {
   height: 100%;
   position: fixed;
   z-index: -10;
-
   background-image: url('../assets/background.svg');
   background-repeat: no-repeat;
   background-position: center center;
@@ -85,6 +84,21 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 930px) {
+  header {
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    width: 50%;
+    font-size: 1.5rem;
+    text-align: center;
+  }
 }
 /* ------------------------------------------ cube */
 .cube {
